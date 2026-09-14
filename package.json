@@ -87,6 +87,8 @@
   ],
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
+    "prepare": "npm run build:interacter && npm run build",
+    "prepack": "npm run build:interacter && npm run build",
     "build:all": "npm run build && npm run build --workspace @litools/instancer-babylonjs && npm run build --workspace @litools/interacter && npm run build --workspace @litools/annotator && npm run build --workspace @litools/stager && npm run build --workspace @litools/animator",
     "build:babylonjs": "npm run build --workspace @litools/instancer-babylonjs",
     "build:interacter": "npm run build --workspace @litools/interacter",
